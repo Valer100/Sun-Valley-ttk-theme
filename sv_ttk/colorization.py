@@ -8,7 +8,7 @@ def hex_to_rgb(hex_color):
 def color_distance(color1, color2):
     return np.sqrt(np.sum((np.array(color1) - np.array(color2))**2))
 
-def tint_image(input_image_path, output_image_path, tint_color, white_threshold=100, black_threshold=100, whiteish_intensity=1, blackish_intensity=1):
+def tint_image(input_image_path, output_image_path, tint_color, white_threshold = 100, black_threshold = 100, whiteish_intensity = 1, blackish_intensity = 1):
     image = Image.open(input_image_path).convert("RGBA")
     data = np.array(image)
     
