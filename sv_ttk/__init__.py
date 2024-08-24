@@ -51,8 +51,7 @@ def set_theme(theme: str, root: tkinter.Tk | None = None) -> None:
         if get_windows_version() == 10:
             import pywinstyles
 
-            if theme == "dark": pywinstyles.apply_style(root, "dark")
-            else: pywinstyles.apply_style(root, "normal")
+            pywinstyles.apply_style(root, "dark" if theme == "dark" else "normal")
 
             # A hacky way to update the title bar's color on Windows 10 (it doesn't update instantly like on Windows 11)
             root.wm_attributes("-alpha", 0.99)
@@ -60,8 +59,7 @@ def set_theme(theme: str, root: tkinter.Tk | None = None) -> None:
         elif get_windows_version() == 11:
             import pywinstyles
             
-            if theme == "dark": pywinstyles.change_header_color(root, "#1c1c1c")
-            elif theme == "light": pywinstyles.change_header_color(root, "#fafafa")
+            pywinstyles.change_header_color(root, "#1c1c1c" if theme == "dark" else "#fafafa")
 
     def set_title_bar_color_toplevels():
         for widget in style.master.winfo_children():
