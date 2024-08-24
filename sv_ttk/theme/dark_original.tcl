@@ -78,7 +78,7 @@ namespace eval ttk::theme::sv_dark {
     }
 
     ttk::style configure Accent.TButton -padding {8 2 8 3} -anchor center -foreground "#000000"
-    ttk::style map Accent.TButton -foreground [list pressed "#25536a" disabled "#a5a5a5"]
+    ttk::style map Accent.TButton -foreground [list pressed "#383838" disabled "#a5a5a5"]
 
     ttk::style element create AccentButton.button image \
       [list $I(button-accent-rest) \
