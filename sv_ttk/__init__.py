@@ -8,6 +8,24 @@ import sys
 
 TCL_THEME_FILE_PATH = Path(__file__).with_name("sv.tcl").absolute()
 
+# Menus fix
+class MenuFix(tkinter.Menu):
+    def __init__(self, master=None, **kw):
+        super().__init__(master, **kw)
+
+        def fix_menu_colors(event = None):
+            import sys
+            
+            if sys.platform == "win32" or sys.platform == "darwin":
+                if (str(self["bg"]).lower() == "#fafafa" and str(self["fg"]).lower() == "#1c1c1c") or (str(self["bg"]).lower() == "#1c1c1c" and str(self["fg"]).lower() == "#fafafa"): 
+                    self.configure(bg="SystemMenu", fg="SystemMenuText")
+        
+        fix_menu_colors()
+        self.after(100, fix_menu_colors)
+        self.bind("<<ThemeChanged>>", fix_menu_colors)
+
+tkinter.Menu = MenuFix
+
 
 # A hacky way to change a Toplevel's title bar color after it's created
 class ThemedToplevel(tkinter.Toplevel):
