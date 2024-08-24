@@ -8,7 +8,7 @@ def hex_to_rgb(hex_color):
 def color_distance(color1, color2):
     return np.sqrt(np.sum((np.array(color1) - np.array(color2))**2))
 
-def tint_image(input_image_path, output_image_path, tint_color, white_threshold=100, black_threshold=100, whiteish_intensity=1, blackish_intensity=1, target_color="#FFFFFF"):
+def tint_image(input_image_path, output_image_path, tint_color, white_threshold=100, black_threshold=100, whiteish_intensity=1, blackish_intensity=1):
     image = Image.open(input_image_path).convert("RGBA")
     data = np.array(image)
     
@@ -23,7 +23,6 @@ def tint_image(input_image_path, output_image_path, tint_color, white_threshold=
     monochrome_mask = (r == g) & (g == b)
 
     tint_r, tint_g, tint_b = hex_to_rgb(tint_color)
-    target_r, target_g, target_b = hex_to_rgb(target_color)
 
     tinted_data = data.copy()
     
@@ -67,14 +66,12 @@ def colorize_controls():
             tint_image(
                 f"{__package__}/theme/spritesheet_light_overlay_original.png",
                 f"{__package__}/theme/spritesheet_light_overlay.png",
-                winaccent.accent_light,
-                target_color = "#005fb8"
+                winaccent.accent_light
             )
             tint_image(
                 f"{__package__}/theme/spritesheet_dark_overlay_original.png",
                 f"{__package__}/theme/spritesheet_dark_overlay.png",
-                winaccent.accent_dark,
-                target_color = "#57c8ff"
+                winaccent.accent_dark
             )
 
             overlay_images(
