@@ -210,7 +210,7 @@ namespace eval ttk::theme::sv_light {
       [list {selected disabled} "#ffffff" \
         {selected pressed} "#636363" \
         selected "#ffffff" \
-        pressed "#c1d8ee" \
+        pressed "#c9c9c9" \
         disabled "#a2a2a2" \
         active "#1a1a1a"
       ]
