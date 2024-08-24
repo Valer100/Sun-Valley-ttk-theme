@@ -12,3 +12,6 @@ dist/
 sdist/
 wheels/
 *.egg-info/
+
+# Example file
+example.py
