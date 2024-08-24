@@ -1,19 +1,18 @@
 <div align="center">
   
-# Sun Valley ttk theme
+# Sun Valley ttk theme (with accent colors)
 Make your Tkinter application look better than ever with just two lines of code!
 
 ![Screenshot of Sun Valley ttk theme](assets/screenshot.png)
 
 </div>
 
+> [!WARNING]
+> This branch is just an experiment! It isn't intended for production use. Your app may start a bit slower, because the spritesheets will be colorized with your accent color at runtime. Also, some accent colors may not colorize the controls completly. Use this version at your own risk.
+
 
 ## Installation [![PyPi downloads](https://static.pepy.tech/badge/sv-ttk)](https://pypi.org/project/sv-ttk)
-The theme is easily installable as a Python package
-
-```
-pip install sv-ttk
-```
+Clone this repository and copy the `sv_ttk` folder to your project. 
 
 
 ## Usage [![Documentation](https://img.shields.io/badge/-documentation-%23c368c4)](https://github.com/rdbende/Sun-Valley-ttk-theme/wiki/Usage-with-Python)
@@ -56,52 +55,4 @@ It's only a matter of an extra import and passing the result of `darkdetect.them
 
 
 ### Dark mode title bar on Windows
-The Sun Valley theme doesn't change the title bar color on Windows when the theme is set to dark. You can use [pywinstyles](https://github.com/Akascape/py-window-styles) to achieve this. Here's an example:
-  
-```python
-import pywinstyles, sys
-
-def apply_theme_to_titlebar(root):
-    version = sys.getwindowsversion()
-
-    if version.major == 10 and version.build >= 22000:
-        # Set the title bar color to the background color on Windows 11 for better appearance
-        pywinstyles.change_header_color(root, "#1c1c1c" if sv_ttk.get_theme() == "dark" else "#fafafa")
-    elif version.major == 10:
-        pywinstyles.apply_style(root, "dark" if sv_ttk.get_theme() == "dark" else "normal")
-
-        # A hacky way to update the title bar's color on Windows 10 (it doesn't update instantly like on Windows 11)
-        root.wm_attributes("-alpha", 0.99)
-        root.wm_attributes("-alpha", 1)
-
-# Example usage (replace `root` with the reference to your main/Toplevel window)
-apply_theme_to_titlebar(root)
-```
-
-Note that on Windows 10, due to its limitations, you can only set the title bar's color to black for dark mode and white for light mode. On Windows 11 the title bar can be set to any color.
-
-
-> [!WARNING]
-> The `apply_theme_to_titlebar` works on Windows only, so you should check whether the platform is Windows before calling this function.
-
-
-Here's how the windows look after calling `set_title_bar_color()`:
-
-<details>
-  <summary>Screenshots</summary>
-  <p align="center">
-    <b>Windows 10</b>
-    <br>
-    <img src="assets/win10.png"/>
-    <br><br>
-    <b>Windows 11</b>
-    <br>
-    <img src="assets/win11.png"/>
-  </p>
-</details>
-
-
-## Wanna see more?
-Check out my other ttk themes!
-- The [Azure ttk theme](https://github.com/rdbende/Azure-ttk-theme)
-- The [Forest ttk theme](https://github.com/rdbende/Forest-ttk-theme)
+Already there.
