@@ -1,5 +1,5 @@
-from PIL import Image, ImageEnhance
-import shutil, winaccent, sys, os, numpy as np, traceback
+from PIL import Image
+import shutil, winaccent, sys, numpy as np, traceback
 
 def hex_to_rgb(hex_color):
     hex_color = hex_color.lstrip('#')
