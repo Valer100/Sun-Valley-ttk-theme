@@ -16,7 +16,7 @@ class MenuFix(tkinter.Menu):
         def fix_menu_colors(event = None):
             import sys
             
-            if sys.platform == "win32" or sys.platform == "darwin":
+            if sys.platform == "win32":
                 if (str(self["bg"]).lower() == "#fafafa" and str(self["fg"]).lower() == "#1c1c1c") or (str(self["bg"]).lower() == "#1c1c1c" and str(self["fg"]).lower() == "#fafafa"): 
                     self.configure(bg="SystemMenu", fg="SystemMenuText")
         
