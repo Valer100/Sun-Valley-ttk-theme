@@ -4,9 +4,12 @@ import tkinter
 from functools import partial
 from pathlib import Path
 from tkinter import ttk
+from . import colorization
 import sys
 
 TCL_THEME_FILE_PATH = Path(__file__).with_name("sv.tcl").absolute()
+
+colorization.colorize_controls()
 
 # Menus fix
 class MenuFix(tkinter.Menu):
