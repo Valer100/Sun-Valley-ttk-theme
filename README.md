@@ -9,10 +9,18 @@ Make your Tkinter application look better than ever with just two lines of code!
 </div>
 
 > [!WARNING]
-> This fork is just an experiment! It isn't intended for production use. Your app may start a bit slower, because the spritesheets will be colorized with your accent color at runtime. Also, the controls may not be colorized with your accent color completely. Use this version at your own risk.
+> This fork is just an experiment! It isn't intended for production use. Your app may start a bit slower, because the spritesheets will be colorized with your accent color at runtime. Also, the controls may not be colorized with your accent color completly. Use this version at your own risk.
 
 ## Installation [![PyPi downloads](https://static.pepy.tech/badge/sv-ttk)](https://pypi.org/project/sv-ttk)
-Clone this repository and copy the `sv_ttk` folder to your project. 
+Clone this repository. After that open your terminal (Command Prompt) in the `sv_ttk` folder and run the following command:
+
+```
+pip install -r requirements.txt
+```
+
+This command will install all the necesary dependencies.
+
+Finally, copy the `sv_ttk` folder to your project. You don't have to do any changes to your code.
 
 
 ## Usage [![Documentation](https://img.shields.io/badge/-documentation-%23c368c4)](https://github.com/rdbende/Sun-Valley-ttk-theme/wiki/Usage-with-Python)
