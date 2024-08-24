@@ -12,7 +12,7 @@ Make your Tkinter application look better than ever with just two lines of code!
 > This fork is just an experiment! It isn't intended for production use. Your app may start a bit slower, because the spritesheets will be colorized with your accent color at runtime. Also, the controls may not be colorized with your accent color completly. Use this version at your own risk.
 
 ## Installation [![PyPi downloads](https://static.pepy.tech/badge/sv-ttk)](https://pypi.org/project/sv-ttk)
-Clone this repository. After that open your terminal (Command Prompt) in the `sv_ttk` folder and run the following command:
+Clone this repository. After that open the `sv_ttk` folder in your terminal (Command Prompt) run the following command:
 
 ```
 pip install -r requirements.txt
