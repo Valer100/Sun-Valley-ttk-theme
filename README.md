@@ -1,7 +1,7 @@
 <div align="center">
   
-# Sun Valley ttk theme (with accent colors)
-Make your Tkinter application look better than ever with just two lines of code!
+# Sun Valley ttk theme
+Make your Tkinter application look better than ever with just two lines of code! Now with accent color support and dark mode titlebars (only on Windows)!
 
 ![Screenshot of Sun Valley ttk theme](assets/screenshot_light.png)
 ![Screenshot of Sun Valley ttk theme](assets/screenshot_dark.png)
@@ -9,8 +9,7 @@ Make your Tkinter application look better than ever with just two lines of code!
 </div>
 
 > [!WARNING]
-> This branch is just an experiment! It isn't intended for production use. Your app may start a bit slower, because the spritesheets will be colorized with your accent color at runtime. Also, some accent colors may not colorize the controls completly. Use this version at your own risk.
-
+> This fork is just an experiment! It isn't intended for production use. Your app may start a bit slower, because the spritesheets will be colorized with your accent color at runtime. Also, the controls may not be colorized with your accent color completely. Use this version at your own risk.
 
 ## Installation [![PyPi downloads](https://static.pepy.tech/badge/sv-ttk)](https://pypi.org/project/sv-ttk)
 Clone this repository and copy the `sv_ttk` folder to your project. 
