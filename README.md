@@ -3,7 +3,8 @@
 # Sun Valley ttk theme (with accent colors)
 Make your Tkinter application look better than ever with just two lines of code!
 
-![Screenshot of Sun Valley ttk theme](assets/screenshot.png)
+![Screenshot of Sun Valley ttk theme](assets/screenshot_light.png)
+![Screenshot of Sun Valley ttk theme](assets/screenshot_dark.png)
 
 </div>
 
