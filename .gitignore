@@ -19,4 +19,6 @@ toplevel.py
 sv_ttk/theme/light.tcl
 sv_ttk/theme/dark.tcl
 sv_ttk/theme/spritesheet_light.png
+sv_ttk/theme/spritesheet_light_overlay.png
 sv_ttk/theme/spritesheet_dark.png
+sv_ttk/theme/spritesheet_dark_overlay.png
