@@ -8,7 +8,7 @@ namespace eval ttk::theme::sv_light {
     -bg      "#fafafa"
     -disfg   "#a0a0a0"
     -selfg   "#ffffff"
-    -selbg   "#2f60d8"
+    -selbg   "#005fb8"
     -accent  "#005fb8"
   }
 
