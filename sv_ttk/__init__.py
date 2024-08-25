@@ -25,12 +25,12 @@ def get_windows_version() -> int:
         return 0
 
 if get_windows_version() >= 10:
-    from . import colorization
     import pywinstyles
 
-TCL_THEME_FILE_PATH = Path(__file__).with_name("sv.tcl").absolute()
-
+from . import colorization
 colorization.colorize_controls()
+
+TCL_THEME_FILE_PATH = Path(__file__).with_name("sv.tcl").absolute()
 
 # Menus fix
 class MenuFix(tkinter.Menu):

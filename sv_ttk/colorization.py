@@ -1,5 +1,5 @@
 from PIL import Image
-import shutil, winaccent, sys, numpy as np, traceback
+import shutil, sys, numpy as np, traceback
 
 def hex_to_rgb(hex_color):
     hex_color = hex_color.lstrip('#')
@@ -57,6 +57,8 @@ def overlay_images(image1_path, image2_path, output_image_path, position=(0, 0))
 def colorize_controls():
     try:
         if sys.platform == "win32":
+            import winaccent
+
             light_tcl = open(f"{__package__}/theme/light_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light)
             dark_tcl = open(f"{__package__}/theme/dark_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light).replace("#57c8ff", winaccent.accent_dark)
 
