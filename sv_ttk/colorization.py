@@ -59,8 +59,8 @@ def colorize_controls():
         if sys.platform == "win32":
             import winaccent
 
-            light_tcl = open(f"{__package__}/theme/light_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light)
-            dark_tcl = open(f"{__package__}/theme/dark_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light).replace("#57c8ff", winaccent.accent_dark)
+            light_tcl = open(f"{__package__}/theme/light_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light_mode)
+            dark_tcl = open(f"{__package__}/theme/dark_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light_mode).replace("#57c8ff", winaccent.accent_dark_mode)
 
             open(f"{__package__}/theme/light.tcl", "w", encoding = "utf8").write(light_tcl)
             open(f"{__package__}/theme/dark.tcl", "w", encoding = "utf8").write(dark_tcl)
@@ -68,12 +68,12 @@ def colorize_controls():
             tint_image(
                 f"{__package__}/theme/spritesheet_light_overlay_original.png",
                 f"{__package__}/theme/spritesheet_light_overlay.png",
-                winaccent.accent_light
+                winaccent.accent_light_mode
             )
             tint_image(
                 f"{__package__}/theme/spritesheet_dark_overlay_original.png",
                 f"{__package__}/theme/spritesheet_dark_overlay.png",
-                winaccent.accent_dark
+                winaccent.accent_dark_mode
             )
 
             overlay_images(
