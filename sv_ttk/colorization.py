@@ -34,8 +34,8 @@ def colorize_controls():
         if sys.platform == "win32":
             import winaccent
 
-            light_tcl = open(f"{__package__}/theme/light_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light_mode)
-            dark_tcl = open(f"{__package__}/theme/dark_original.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light_mode).replace("#57c8ff", winaccent.accent_dark_mode)
+            light_tcl = open(f"{__package__}/theme/original/light.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light_mode)
+            dark_tcl = open(f"{__package__}/theme/original/dark.tcl", "r", encoding = "utf8").read().replace("#005fb8", winaccent.accent_light_mode).replace("#57c8ff", winaccent.accent_dark_mode)
 
             open(f"{__package__}/theme/light.tcl", "w", encoding = "utf8").write(light_tcl)
             open(f"{__package__}/theme/dark.tcl", "w", encoding = "utf8").write(dark_tcl)
@@ -52,14 +52,14 @@ def colorize_controls():
             )
 
             overlay_images(
-                f"{__package__}/theme/original/mask_light.png", 
                 f"{__package__}/theme/original/spritesheet_light.png",
+                f"{__package__}/theme/mask_light.png", 
                 f"{__package__}/theme/spritesheet_light.png"
             )
 
             overlay_images(
-                f"{__package__}/theme/original/mask_dark.png", 
                 f"{__package__}/theme/original/spritesheet_dark.png",
+                f"{__package__}/theme/mask_dark.png", 
                 f"{__package__}/theme/spritesheet_dark.png"
             )
         else:
@@ -67,17 +67,3 @@ def colorize_controls():
     except Exception as e:
         print(traceback.format_exc())
         use_default_colors()
-
-import winaccent
-
-tint_image(
-        f"{__file__.replace('colorization.py', '')}theme/original/mask.png",
-        f"{__file__.replace('colorization.py', '')}theme/mask_light.png",
-        winaccent.accent_light_mode
-)
-            
-tint_image(
-        f"{__file__.replace('colorization.py', '')}theme/original/mask.png",
-        f"{__file__.replace('colorization.py', '')}theme/mask_dark.png",
-        winaccent.accent_dark_mode
-)
