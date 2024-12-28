@@ -24,4 +24,4 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "Automation: Update sprite sheets"
-        file_pattern: sv_ttk/theme/*.*
+        file_pattern: sv_ttk/theme/*
