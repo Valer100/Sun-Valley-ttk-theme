@@ -16,3 +16,9 @@ wheels/
 # Other files
 example.py
 toplevel.py
+sv_ttk/theme/light.tcl
+sv_ttk/theme/dark.tcl
+sv_ttk/theme/mask_light.png
+sv_ttk/theme/mask_dark.png
+sv_ttk/theme/spritesheet_light.png
+sv_ttk/theme/spritesheet_dark.png
