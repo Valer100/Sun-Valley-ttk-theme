@@ -52,7 +52,7 @@ for (const theme of ["dark", "light"]) {
     })
     .toBuffer();
 
-  fs.writeFileSync(`../sv_ttk/theme/spritesheet_${theme}.png`, packedImage);
+  fs.writeFileSync(`../sv_ttk/theme/original/spritesheet_${theme}.png`, packedImage);
   fs.writeFileSync(
     `../sv_ttk/theme/sprites_${theme}.tcl`,
     `set ::spriteinfo [list \\\n  ${packedBin.rects
