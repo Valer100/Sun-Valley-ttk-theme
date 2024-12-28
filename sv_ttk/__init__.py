@@ -28,7 +28,7 @@ if get_windows_version() >= 10:
     import pywinstyles
 
 from . import colorization
-colorization.colorize_controls()
+# colorization.colorize_controls()
 
 TCL_THEME_FILE_PATH = Path(__file__).with_name("sv.tcl").absolute()
 
